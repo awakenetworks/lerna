@@ -422,6 +422,9 @@ package, the `prepublish` command will run for that package.
 
 `lerna watch` respects the `--ignore` flag (see below).
 
+> Note: the `scope` flag is processed before the `ignore` flag. If for some
+reason both are present, the `ignore` flag will be ignored.
+
 ## Misc
 
 Lerna will log to a `lerna-debug.log` file (same as `npm-debug.log`) when it encounters an error running a command.
