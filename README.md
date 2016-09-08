@@ -518,7 +518,9 @@ $ lerna bootstrap --ignore component-*
 > Hint: The glob is matched against the package name defined in `package.json`,
 > not the directory name the package lives in.
 
-The `ignore` flag can be used with the `bootstrap` and `watch` command.
+The `ignore` flag, when used with the `bootstrap` command, can also be set in `lerna.json` under the `bootstrapConfig` key. The command-line flag will take precendence over this option. This flag is supported in `bootstrap`, `exec`, and `watch` commands.
+
+**Note**: If both `scope` and `ignore` are provided to `exec` command, `scope` takes precedence.
 
 For bootstrapping, you can also set the `ignore` option in `lerna.json` under the `bootstrapConfig` key.
 
